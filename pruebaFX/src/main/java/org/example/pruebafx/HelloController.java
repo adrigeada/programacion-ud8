@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public class HelloController {
 
+    static Contador contador = new Contador();
+
     @FXML
     private Label welcomeText;
 
@@ -20,7 +22,7 @@ public class HelloController {
 
     @FXML
     public void initialize(){
-        Contador contador = new Contador();
+
         pruebaPulsaButton.setOnAction( e -> {
             contador.contar();
             contadorLabel.setText(Integer.toString(contador.getContar()));
@@ -35,5 +37,10 @@ public class HelloController {
 
     public void siguienteClickButton() throws IOException {
         HelloApplication.setRoot("segunda-view");
+    }
+
+    public void resetarButton() {
+        contador.resetear();
+        contadorLabel.setText(Integer.toString(contador.getContar()));
     }
 }

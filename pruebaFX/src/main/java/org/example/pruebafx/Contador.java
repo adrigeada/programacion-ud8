@@ -16,4 +16,8 @@ public class Contador {
         return contar;
     }
 
+    public void resetear(){
+        contar = 0;
+    }
+
 }

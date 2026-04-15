@@ -4,11 +4,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pruebafx.SegundaController">
+<VBox alignment="CENTER" prefHeight="457.0" prefWidth="322.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.pruebafx.SegundaController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
+      <Label text="Mantenimiento de Personas" />
+      <TableView fx:id="personasTableView" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="nombreTableColumn" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="edadTableColumn" prefWidth="75.0" text="Edad" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="nombreTextField" promptText="Introduce nombre..." />
+      <TextField fx:id="edadTextField" promptText="Introduce edad..." />
+      <Button mnemonicParsing="false" onAction="#guardarButton" text="Guardar" />
       <Button mnemonicParsing="false" onAction="#retrocesoClickButton" text="Volver" />
    </children>
 
