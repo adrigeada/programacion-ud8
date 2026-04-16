@@ -13,11 +13,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class SegundaController {
 
-    static ObservableList<Persona> listaPersonas = FXCollections.observableArrayList();
+
 
     @FXML
     private TableView<Persona> personasTableView;
@@ -40,7 +40,7 @@ public class SegundaController {
         nombreTableColumn.setCellValueFactory(datos -> new SimpleStringProperty(datos.getValue().getNombre()));
         edadTableColumn.setCellValueFactory(datos -> new SimpleIntegerProperty(datos.getValue().getEdad()).asObject());
 
-        personasTableView.setItems(listaPersonas);
+        personasTableView.setItems(DatosPersona.getListaPersonas());
     }
 
 
@@ -53,10 +53,10 @@ public class SegundaController {
         Integer edad = Integer.parseInt(edadTextField.getText());
 
         Persona persona = new Persona(nombre,edad);
-        listaPersonas.add(persona);
+        DatosPersona.insertarPersona(persona);
 
         System.out.println("Persona creada: "+nombre+" - "+edad);
-        System.out.println(listaPersonas);
+        System.out.println(DatosPersona.getListaPersonas());
 
         nombreTextField.clear();
         edadTextField.clear();

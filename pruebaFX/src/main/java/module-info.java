@@ -10,6 +10,7 @@ module org.example.pruebafx {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires javafx.base;
 
     opens org.example.pruebafx to javafx.fxml;
     exports org.example.pruebafx;
