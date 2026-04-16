@@ -50,7 +50,15 @@ public class SegundaController {
 
     public void guardarButton() {
         String nombre = nombreTextField.getText();
-        Integer edad = Integer.parseInt(edadTextField.getText());
+        Integer edad;
+
+        try {
+            edad = Integer.parseInt(edadTextField.getText());
+        }catch (NumberFormatException e){
+            System.out.println("Edad inválida");
+            return;
+        }
+
 
         Persona persona = new Persona(nombre,edad);
         DatosPersona.insertarPersona(persona);
