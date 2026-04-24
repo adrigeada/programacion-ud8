@@ -108,10 +108,13 @@ public class BaseDatos {
         }
     }
 
-    public static void editar(Connection conexion){
+    public static void editar(Connection conexion,Estudiante estudiante){
         System.out.println("Modificando...");
 
-        String query = "UPDATE ESTUDIANTE set nombre = 'Patri' where nombre = 'Patricia'";
+        String query = "UPDATE ESTUDIANTE set nia = '"+estudiante.getNia()+"' " +
+                ",nombre = '"+estudiante.getNombre()+"' " +
+                ",fecha_nacimiento = '"+estudiante.getFecha_nacimiento()+"' " +
+                "where nia = '"+estudiante.getNia()+"'";
 
         Statement stmt;
 

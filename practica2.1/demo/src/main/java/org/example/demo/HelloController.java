@@ -50,10 +50,13 @@ public class HelloController {
 
             insertarButton.setDisable(true);
             guardarButton.setDisable(false);
+
             niaTextField.setText(Integer.toString(seleccionado.getNia()));
             nombreTextField.setText(seleccionado.getNombre());
             fechaPicker.setValue(seleccionado.getFecha_nacimiento());
-            actionLabel.setText("Estudiante editado.");
+
+            niaTextField.setDisable(true);
+
         }
     }
 
@@ -73,21 +76,53 @@ public class HelloController {
     }
 
     public void insertarButtonClick() {
+        Integer nia = 0;
+
+        try {
+            nia = Integer.parseInt(niaTextField.getText());
+        }catch (Exception e){
+            actionLabel.setText("El nia tiene que ser numérico");
+        }
+
+        String nombre = nombreTextField.getText();
+        LocalDate fecha = fechaPicker.getValue();
+
+        if (nia == null || nombre == null || fecha == null){
+           actionLabel.setText("Rellena todos los campos");
+        }else{
+
+            Estudiante estudiante = new Estudiante(nia,nombre,fecha);
+
+            BaseDatos.insertar(bd,estudiante);
+
+            nombreTextField.clear();
+            niaTextField.clear();
+            fechaPicker.setValue(null);
+
+            estudiantesTableView.setItems(BaseDatos.consulta(bd));
+
+        }
+
+    }
+
+    public void guardarButtonClick() {
+
         Integer nia = Integer.parseInt(niaTextField.getText());
         String nombre = nombreTextField.getText();
         LocalDate fecha = fechaPicker.getValue();
-        Estudiante estudiante = new Estudiante(nia,nombre,fecha);
 
-        BaseDatos.insertar(bd,estudiante);
+        BaseDatos.editar(bd,new Estudiante(nia,nombre,fecha));
 
         nombreTextField.clear();
         niaTextField.clear();
+        fechaPicker.setValue(null);
 
         estudiantesTableView.setItems(BaseDatos.consulta(bd));
-    }
 
-    public void guardarButtonClick(ActionEvent actionEvent) {
+        insertarButton.setDisable(false);
+        guardarButton.setDisable(true);
 
+        niaTextField.setDisable(false);
 
     }
 }
