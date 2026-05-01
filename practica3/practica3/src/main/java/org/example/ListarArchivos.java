@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.File;
+import java.util.Arrays;
 
 
 public class ListarArchivos {
@@ -17,6 +18,7 @@ public class ListarArchivos {
 //        }else{
 //            System.out.println("No hay archivos en la carpeta");
 //        }
+
 
         listaCarpeta(directorio2);
         System.out.println("\n");
