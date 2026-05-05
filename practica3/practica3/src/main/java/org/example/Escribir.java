@@ -1,13 +1,13 @@
 package org.example;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Escribir {
     static void main() {
+
+        File archivo = new File("src/main/resources/ejemplo1.txt");
 
 //        try {
 //
@@ -22,7 +22,8 @@ public class Escribir {
 //            System.out.println("Ha habido algún problema.");
 //            e.printStackTrace();
 //        }
-        ejercicio8();
+//        ejercicio8();
+        ejercicio9(archivo);
 
     }
 
@@ -61,5 +62,48 @@ public class Escribir {
             }
 
         }
+    }
+
+    public static void ejercicio9(File archivo){
+
+        File archivoTemp = new File("src/main/resources/archivoTempEj9.txt");
+
+        try{
+            BufferedReader lector = new BufferedReader(new FileReader(archivo));
+            BufferedWriter escritor = new BufferedWriter(new FileWriter(archivoTemp));
+            String linea;
+
+            while ((linea = lector.readLine()) != null) {
+
+                for (String palabras : linea.split(" ")){//Cojo cada palabra de la línea
+
+                    String[] palabra= palabras.split("");//Esas palabras la separo en letras
+                    palabra[0] = palabra[0].toUpperCase();//La primera letra de cada palabra la pongo mayuscula
+
+                    String palabraEscribir = "";
+                    for (String letras : palabra){ //Concateno todas las letras en un String nuevo
+                        palabraEscribir += letras;
+                    }
+
+                    escritor.write(palabraEscribir+" ");//El escritor escribe la nueva palabra con un espacio detrás
+                }
+
+            }
+            lector.close();
+            escritor.close();
+
+            if (archivo.delete()) {
+                archivoTemp.renameTo(archivo);
+                System.out.println("Archivo modificado correctamente.");
+            } else {
+                System.out.println("No se ha podido reemplazar el archivo original.");
+            }
+
+
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
