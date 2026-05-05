@@ -54,7 +54,7 @@ public class ejercicio10 {
                     cola.offer(palabra);
                 }
             }
-            
+
 
         }catch (IOException e){
             e.printStackTrace();
