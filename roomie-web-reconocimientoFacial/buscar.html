@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo_nav.css">
+    <link rel="stylesheet" href="css/estilo_cont.css">
+    <link rel="stylesheet" href="css/estilos_busqueda.css">
+    <script src="javaScript/busquedaJs.js" defer></script>
+    <title>roomie</title>
+</head>
+
+<body>
+    <div class="navegador">
+        <img src="img/logo.png" alt="Logo Roomie">
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="buscar.html">Buscar</a></li>
+            <li><button class="btn_inicio" id="perfil"></button></li>
+            <li><button class="btn_registro" id="registro">Cerrar Sesión</button></li>
+        </ul>
+    </div>
+
+    <!-- ========BUSCADOR=============  -->
+    <div class="contenedor_busqueda">
+
+        <h1>Encuentra tu lugar ideal</h1>
+        <br>
+        <p>Encuentra pisos y habitaciones perfectas para ti en zonas universitarias y más</p>
+        <br>
+
+        <div class="formu_busqueda">
+            <form action="#" method="post">
+                <input type="search" name="busqueda" id="busqueda" placeholder="Busca por ciudad, barrio, zona...">
+                <select name="precio" id="precio" class="filtro_precio">
+                    <option value="">Precio Máximo</option>
+                    <option value="300">Hasta 300€</option>
+                    <option value="500">Hasta 500€</option>
+                    <option value="700">Hasta 700€</option>
+                    <option value="1000">Hasta 1000€</option>
+                </select>
+                <select name="opciones" id="opciones" class="filtro_precio filtro_opciones">
+                    <option value="">Opciones</option>
+                    <option value="wifi">Wifi</option>
+                    <option value="empadronamiento">Empadronamiento</option>
+                    <option value="amueblada">Amueblada</option>
+                    <option value="animales">Animales permitidos</option>
+                </select>
+                <select name="tipo" id="tipo" class="filtro_precio filtro_tipo">
+                    <option value="">Tipo</option>
+                    <option value="individual">Individual</option>
+                    <option value="compartida">Compartida</option>
+                </select>
+
+                <button type="submit" class="but_buscar" id="but_buscar">Buscar</button>
+            </form>
+        </div>
+        <!-- ========HABITACIONES=============  -->
+        <div id="habitacion_1" class="habitaciones">
+            <div class="contenedor_habitacion">
+                <img src="" alt="Es una imagen de una abitacion">
+                <div class="info">
+                    <h2>Habitación individual luminosa</h2>
+                    <br>
+                    <p class="ubicacion">Centro de Madrid</p>
+                    <br>
+                    <p>12m2</p>
+                    <br>
+                    <p class="precio_habitacion">450€/mes</p>
+                    <br>
+                    <div class="extras">
+                        <p class="servicios">Wifi</p>
+                        <p class="servicios">Empadronamiento</p>
+                        <p class="caracteristicas">Individual</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="habitacion_2" class="habitaciones">
+            <div class="contenedor_habitacion">
+                <img src="" alt="Es una imagen de una abitacion">
+                <div class="info">
+                    <h2>Habitación individual luminosa</h2>
+                    <br>
+                    <p class="ubicacion">Centro de Valencia</p>
+                    <br>
+                    <p>12m2</p>
+                    <br>
+                    <p class="precio_habitacion">600€/mes</p>
+                    <br>
+                    <div class="extras">
+                        <p class="servicios">Wifi</p>
+                        <p class="caracteristicas">Individual</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="habitacion_3" class="habitaciones">
+            <div class="contenedor_habitacion">
+                <img src="" alt="Es una imagen de una abitacion">
+                <div class="info">
+                    <h2>Habitación individual luminosa</h2>
+                    <br>
+                    <p class="ubicacion">Centro de Barcelona</p>
+                    <br>
+                    <p>12m2</p>
+                    <br>
+                    <p class="precio_habitacion">1000€/mes</p>
+                    <br>
+                    <div class="extras">
+                        <p class="servicios">Wifi</p>
+                        <p class="servicios">Empadronamiento</p>
+                        <p class="caracteristicas">Compartida</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="habitacion_4" class="habitaciones">
+            <div class="contenedor_habitacion">
+                <img src="" alt="Es una imagen de una abitacion">
+                <div class="info">
+                    <h2>Habitación individual luminosa</h2>
+                    <br>
+                    <p class="ubicacion">Centro de Madrid</p>
+                    <br>
+                    <p>12m2</p>
+                    <br>
+                    <p class="precio_habitacion">450€/mes</p>
+                    <br>
+                    <div class="extras">
+                        <p class="servicios">Wifi</p>
+                        <p class="servicios">Empadronamiento</p>
+                        <p class="caracteristicas">Individual</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ========FOOTER=============  -->
+
+    <div class="footer-cont">
+
+        <div class="col1">
+            <h4>Página</h4>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Buscar</a></li>
+                <li><a href="registro.html">Registro</a></li>
+            </ul>
+        </div>
+
+        <div class="col2">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="col3">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Política de privacidad</a></li>
+            </ul>
+        </div>
+
+        <div class="separador"></div>
+        <div class="copy">© 2026 Roomie. Todos los derechos reservados.</div>
+
+    </div>
+</body>
+
+</html>
