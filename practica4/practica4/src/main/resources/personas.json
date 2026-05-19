@@ -1,0 +1,26 @@
+[
+  {
+    "nombre": "Luis",
+    "edad": 25,
+    "lenguajes": [
+      "Java",
+      "Python"
+    ]
+  },
+  {
+    "nombre": "Marina",
+    "edad": 24,
+    "lenguajes": [
+      "Español",
+      "Inglés"
+    ]
+  },
+  {
+    "nombre": "Adri",
+    "edad": 28,
+    "lenguajes": [
+      "Java",
+      "SQL"
+    ]
+  }
+]

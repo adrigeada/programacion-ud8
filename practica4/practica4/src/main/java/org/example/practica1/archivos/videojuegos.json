@@ -1,0 +1,39 @@
+[
+  {
+    "nombre": "dsa",
+    "plataforma": "dsa",
+    "precio": 12.0,
+    "disponible": true,
+    "listaGeneros": [
+      "htrhb"
+    ]
+  },
+  {
+    "nombre": "ahefr",
+    "plataforma": "ref",
+    "precio": 40.0,
+    "disponible": false,
+    "listaGeneros": [
+      "ghfd"
+    ]
+  },
+  {
+    "nombre": "tf",
+    "plataforma": "30",
+    "precio": 10.0,
+    "disponible": true,
+    "listaGeneros": [
+      "rgefd"
+    ]
+  },
+  {
+    "nombre": "Pokemon",
+    "plataforma": "Nintendo",
+    "precio": 29.0,
+    "disponible": true,
+    "listaGeneros": [
+      "Aventura",
+      "Turnos"
+    ]
+  }
+]
