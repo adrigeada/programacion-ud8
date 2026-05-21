@@ -50,7 +50,7 @@ public class AppPokemon {
             }
 
         }catch (Exception e){
-            System.out.println("Algo salió mal");
+            System.out.println("Pokemon no existente");
             e.printStackTrace();
         }
     }
