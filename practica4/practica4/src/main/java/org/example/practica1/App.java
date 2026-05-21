@@ -19,14 +19,14 @@ public class App {
     static List<Videojuego> listaVideojuegos = new ArrayList<>();
     static void main(String[] args) {
 
+        //Creo una lista de videojuegos por teclado. Creo el Json de esa lista y lo leo con un reader.
+        //Saco los objetos del json, los meto en una lista, añado un nuevo juego a la lista, y lo vuelvo a pasar a JSON
+
         listaVideojuegos = crearLista();
         crearJson(listaVideojuegos);
         anyadirVideojuego();
         menor30();
         crearJson(listaVideojuegos);
-
-        //Creo una lista de videojuegos por teclado. Creo el Json de esa lista y lo leo con un reader.
-        //Saco los objetos del json, los meto en una lista, añado un nuevo juego a la lista, y lo vuelvo a pasar a JSON
 
     }
 
